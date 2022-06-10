@@ -1,5 +1,4 @@
-package com.example.foodaap.entety;
-
+package com.example.foodaap.entety.template;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
@@ -24,22 +23,22 @@ public abstract class AbsEntity {
     @GeneratedValue(generator = "uuid2")
     @GenericGenerator(name = "uuid2", strategy = "org.hibernate.id.UUIDGenerator")
     private UUID id;
-
-    @OrderBy
-    @CreationTimestamp
-    @Column(nullable = false, updatable = false)
-    private Timestamp createdAt;
-
-    @UpdateTimestamp
-    @Column(nullable = false)
-    private Timestamp updatedAt;
-
-    @CreatedBy
-    @Column(name = "created_by_id")
-    private UUID createdBy;
-
-    @LastModifiedBy
-    @Column(name = "updated_by_id")
-    private UUID updatedBy;
+//
+//    @OrderBy
+//    @CreationTimestamp
+//    @Column(nullable = false, updatable = false)
+//    private Timestamp createdAt;
+//
+//    @UpdateTimestamp
+//    @Column(nullable = false)
+//    private Timestamp updatedAt;
+//
+//    @CreatedBy
+//    @Column(name = "created_by_id")
+//    private UUID createdBy;
+//
+//    @LastModifiedBy
+//    @Column(name = "updated_by_id")
+//    private UUID updatedBy;
 
 }

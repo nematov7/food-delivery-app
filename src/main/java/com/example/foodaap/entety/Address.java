@@ -7,17 +7,25 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.PackagePrivate;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import java.util.HashSet;
-import java.util.Set;
+import javax.persistence.ManyToOne;
 
 @Entity
 @PackagePrivate
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Roles extends AbsEntity {
+public class Address extends AbsEntity {
+    @ManyToOne
+    User user;
     String name;
-    @ManyToMany
-    Set<Roles> roles = new HashSet<>();
+    @ManyToOne
+    Districts districts;
+    String landmark; //taxminiy joy
+    int houseNumber;  //nichinchi domligi
+    int entrance; //padiz
+    int flat; // uy nomeri
+    int floor;//qavat
+    float latitude;
+    float longitude;
+
 }

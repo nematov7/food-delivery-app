@@ -7,17 +7,15 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.PackagePrivate;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import java.util.HashSet;
-import java.util.Set;
 
 @Entity
 @PackagePrivate
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Roles extends AbsEntity {
-    String name;
-    @ManyToMany
-    Set<Roles> roles = new HashSet<>();
+public class LanguageCategory extends AbsEntity {
+    String nameUz;
+    String nameRu;
+    String nameEn;
+    String description_uz;
 }
