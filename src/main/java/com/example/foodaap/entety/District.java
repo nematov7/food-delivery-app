@@ -1,18 +1,16 @@
 package com.example.foodaap.entety;
 
 import com.example.foodaap.entety.template.AbsEntity;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.PackagePrivate;
 
 import javax.persistence.Entity;
-
-@Entity
+@Entity(name = "districts")
 @PackagePrivate
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class Districts extends AbsEntity {
+@Getter
+@Setter
+public class District extends AbsEntity {
     String name;
 }

@@ -1,23 +1,24 @@
 package com.example.foodaap.entety;
 
+import com.example.foodaap.entety.enums.RoleEnum;
 import com.example.foodaap.entety.template.AbsEntity;
 import lombok.AllArgsConstructor;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.PackagePrivate;
 
 import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
-import java.util.HashSet;
-import java.util.Set;
+import javax.persistence.Transient;
 
-@Entity
 @PackagePrivate
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class Roles extends AbsEntity {
+@Getter
+@Setter
+@Entity(name = "roles")
+public class Role extends AbsEntity {
     String name;
-    @ManyToMany
-    Set<Roles> roles = new HashSet<>();
+
+    RoleEnum role;
 }
