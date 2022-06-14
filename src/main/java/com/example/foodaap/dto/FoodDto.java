@@ -1,21 +1,19 @@
-package com.example.foodaap.entety;
+package com.example.foodaap.dto;
 
-import com.example.foodaap.entety.template.AbsEntity;
-import lombok.*;
-import lombok.experimental.PackagePrivate;
+import com.example.foodaap.entety.Category;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import java.time.LocalTime;
 
-
-@PackagePrivate
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Entity(name = "foods")
-public class Food extends AbsEntity {
+public class FoodDto {
     String name;
     String description;
     double price;
@@ -26,5 +24,4 @@ public class Food extends AbsEntity {
     @ManyToOne
     Category category;
     int preparationTimeInMin;
-
 }
