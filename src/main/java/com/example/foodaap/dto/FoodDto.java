@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
 import javax.persistence.ManyToOne;
 import java.time.LocalTime;
 
@@ -13,15 +14,24 @@ import java.time.LocalTime;
 @NoArgsConstructor
 @Getter
 @Setter
+
 public class FoodDto {
+
     String name;
+
     String description;
+
     double price;
+
     String  imageId;
-    boolean isAvailable;
+
+    Boolean isAvailable;
+
     LocalTime availableFrom;
+
     LocalTime availableTo;
-    @ManyToOne
-    Category category;
+
+    String  categoryId;
+
     int preparationTimeInMin;
 }
