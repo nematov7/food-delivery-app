@@ -4,6 +4,7 @@ import com.example.foodaap.entety.template.AbsEntity;
 import lombok.*;
 import lombok.experimental.PackagePrivate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import java.time.LocalTime;
@@ -20,10 +21,10 @@ public class Food extends AbsEntity {
     String description;
     double price;
     String  imageId;
-    boolean isAvailable;
+    Boolean isAvailable;
     LocalTime availableFrom;
     LocalTime availableTo;
-    @ManyToOne
+    @ManyToOne(optional = false)
     Category category;
     int preparationTimeInMin;
 
